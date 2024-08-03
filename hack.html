@@ -200,12 +200,12 @@
         <div id="testimonials">
             <h2>Témoignages</h2>
             <div class="testimonial">
-                <p>"GAME-DEV HACK m'a aidé à obtenir des résultats incroyables! et gains énormes sur le je crash de 1xbet."</p>
+                <p>"GAME-DEV HACK m'a aidé à obtenir des résultats incroyables! et gains énormes sur le jeu crash de 1xbet."</p>
                 <div class="testimonial-name">Adama Traoré</div>
                 <div class="testimonial-rating">★★★★★</div>
             </div>
             <div class="testimonial">
-                <p>"Le meilleur et le seul outil de hack à ma connaissance, je l'ai utilisé uniquement sur luckyJet les résultats sont immpressionnant! Super efficace."</p>
+                <p>"Le meilleur et le seul outil de hack à ma connaissance, je l'ai utilisé uniquement sur luckyJet, les résultats sont impressionnants! Super efficace."</p>
                 <div class="testimonial-name">Koffi Kouassi</div>
                 <div class="testimonial-rating">★★★★★</div>
             </div>
@@ -215,36 +215,40 @@
                 <div class="testimonial-rating">★★★★★</div>
             </div>
             <div class="testimonial">
-                <p>"Des résultats précis, sur 20 jeux tu perd 3 fois si tu est gourmand très satisfait."</p>
+                <p>"Des résultats précis, sur 20 jeux tu perds 3 fois si tu es gourmand, très satisfait."</p>
                 <div class="testimonial-name">Yao Koffi</div>
                 <div class="testimonial-rating">★★★★☆</div>
             </div>
             <div class="testimonial">
-                <p>"GAME-DEV HACK est une révolution dans le domaine des jeux aviator pour la premières fois mon compte 1win dépasse la barre de 150000F en seulement 3jours."</p>
+                <p>"GAME-DEV HACK est une révolution dans le domaine des jeux aviator, pour la première fois mon compte 1win dépasse la barre de 150000F en seulement 3 jours."</p>
                 <div class="testimonial-name">Fatou Bamba</div>
                 <div class="testimonial-rating">★★★★★</div>
             </div>
             <div class="testimonial">
-                <p>"Tu nous rend service GAME-DEV ton outil est performant."</p>
+                <p>"Tu nous rends service GAME-DEV, ton outil est performant."</p>
                 <div class="testimonial-name">Ismael Coulibaly</div>
                 <div class="testimonial-rating">★★★★☆</div>
             </div>
             <div class="testimonial">
-                <p>"Très satisfait de l'expérience j'ai éffectuer un dépôt de 5000f sur le compte je me retrouve à 58000f la semaines n'est même pas encore terminer."</p>
+                <p>"Très satisfait de l'expérience, j'ai effectué un dépôt de 5000F sur le compte et me retrouve à 58000F, la semaine n'est même pas encore terminée."</p>
                 <div class="testimonial-name">Mariam Diabaté</div>
                 <div class="testimonial-rating">★★★★★</div>
             </div>
             <div class="testimonial">
-                <p>"Des résultats fiables j'ai jouer à crash 1win côtes 27,04x; 12,37x puis 44,03x.sont passer puis le logiciel à prédit 118,09x j'ai pas miser la côter est passer à 118,44x."</p>
-                <div class="testimonial-name">Aboubacar Diallo</div>
+                <p>"Des résultats fiables, j'ai joué à Crash 1win côtoyer la chance est bien aussi."</p>
+                <div class="testimonial-name">Soro Kouadio</div>
                 <div class="testimonial-rating">★★★★☆</div>
+            </div>
+            <div class="testimonial">
+                <p>"Un excellent outil de hack avec des gains surprenants, bravo GAME-DEV!"</p>
+                <div class="testimonial-name">Nafissatou Diop</div>
+                <div class="testimonial-rating">★★★★★</div>
             </div>
         </div>
     </div>
-
     <script>
         const passwords = [
-            "T0FwK9Pz8LJ2", "g5AaZ1BfM6cP", "Fk8M2Tq1rXdP", "Z9y0cKpF2VbL",
+        "T0FwK9Pz8LJ2", "g5AaZ1BfM6cP", "Fk8M2Tq1rXdP", "Z9y0cKpF2VbL",
             "R7wGm4Q1V8pZ", "Bx6VtD3PzJ1n", "A3yZ0Lq5Fv7K", "h1kB4Xy9tQeP",
             "Y6nGm2J0P8rL", "d8T0x5KQpZ7v", "w2Y5cK1rF8LZ", "Z6pQ9vG3K2mB",
             "C0yF4J1wT7Lp", "R5M2x8KQv9Pj", "B4L7nT3Fz1kY", "h0Q9Z2c6P8vG",
@@ -263,6 +267,45 @@
         ];
 
         const usedPasswords = {};
+
+        function generateRandomNumber() {
+            const rand = Math.random();
+            if (rand < 0.95) {
+                return (Math.random() * 3.98 + 1.01).toFixed(2) + 'x'; // 95% between 1.01x and 4.99x
+            } else if (rand < 0.99) {
+                return (Math.random() * 15.99 + 5.00).toFixed(2) + 'x'; // 4% between 5.00x and 20.99x
+            } else {
+                return (Math.random() * 90.00 + 30.00).toFixed(2) + 'x'; // 1% between 30.00x and 120.00x
+            }
+        }
+
+        function generateAllNumbers() {
+            const games = [
+                'luckyJet',
+                'crash1win',
+                'crash1xbet',
+                'crashBetwiner',
+                'crashMegapari',
+                'crash888starz',
+                'crashMelbet',
+                'crashLinebet'
+            ];
+
+            games.forEach(game => {
+                const inputElement = document.getElementById(game);
+                const resultElement = document.getElementById('result' + capitalizeFirstLetter(game));
+
+                if (inputElement.value.trim() !== '') {
+                    resultElement.textContent = generateRandomNumber();
+                } else {
+                    resultElement.textContent = '';
+                }
+            });
+        }
+
+        function capitalizeFirstLetter(string) {
+            return string.charAt(0).toUpperCase() + string.slice(1);
+        }
 
         function executeCommand() {
             const idField = document.getElementById('idField');
@@ -294,7 +337,8 @@
 
             // Associate the password with the ID if valid
             usedPasswords[password] = id;
-            resultDiv.innerText = 'Access Granted. ID and Password are valid.';
+            const randomNumber = generateRandomNumber();
+            resultDiv.innerText = `Access Granted. ID and Password are valid. Random Number: ${randomNumber}`;
             resultDiv.style.color = 'green';
         }
     </script>
