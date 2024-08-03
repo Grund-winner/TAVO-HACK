@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Selector - GAME-DEV HACK</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: #33ff33;
+            font-family: 'Courier New', Courier, monospace;
+            text-align: center;
+            overflow: hidden;
+            position: relative;
+        }
+
+        #container {
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 255, 0, 0.5);
+            animation: fadeIn 2s ease-out;
+            z-index: 2;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        #logo {
+            margin-bottom: 20px;
+        }
+
+        #logo h1 {
+            font-size: 2.5em;
+            margin: 0;
+            color: #33ff33;
+            text-shadow: 2px 2px 4px rgba(0, 255, 0, 0.7);
+        }
+
+        .game-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .game-list li {
+            margin: 10px 0;
+        }
+
+        .game-list a {
+            color: #33ff33;
+            text-decoration: none;
+            font-size: 1.2em;
+            padding: 8px 16px;
+            border: 2px solid #33ff33;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+            display: inline-block;
+        }
+
+        .game-list a:hover {
+            background-color: #33ff33;
+            color: #000;
+            transform: translateY(-3px);
+        }
+
+        .contact-button {
+            margin-top: 20px;
+            background: #33ff33;
+            border: none;
+            color: #000;
+            padding: 8px 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background 0.3s ease, transform 0.3s ease;
+            font-size: 1em;
+        }
+
+        .contact-button:hover {
+            background-color: #28c328;
+            transform: translateY(-3px);
+        }
+
+        .promo-button {
+            position: absolute;
+            background: #ff5733;
+            border: none;
+            color: #fff;
+            padding: 8px 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background 0.3s ease, transform 0.3s ease;
+            font-size: 0.8em;
+        }
+
+        .promo-button:hover {
+            background-color: #e04a1b;
+            transform: translateY(-3px);
+        }
+
+        .top-left {
+            top: 10px;
+            left: 10px;
+        }
+
+        .top-right {
+            top: 10px;
+            right: 10px;
+        }
+
+        .bottom-left {
+            bottom: 10px;
+            left: 10px;
+        }
+
+        .bottom-right {
+            bottom: 10px;
+            right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="logo">
+            <h1>GAME-DEV HACK</h1>
+        </div>
+        <ul class="game-list">
+            <li><a href="hack.html?game=luckyJet">Lucky Jet</a></li>
+            <li><a href="hack.html?game=crash 1win">Crash 1win</a></li>
+            <li><a href="hack.html?game=crash 1xbet">Crash 1xbet</a></li>
+            <li><a href="hack.html?game=crash Betwiner">Crash Betwiner</a></li>
+            <li><a href="hack.html?game=crash Megapari">Crash Megapari</a></li>
+            <li><a href="hack.html?game=crash 888starz">Crash 888starz</a></li>
+            <li><a href="hack.html?game=crash Melbet">Crash Melbet</a></li>
+            <li><a href="hack.html?game=crash Linebet">Crash Linebet</a></li>
+        </ul>
+        <button class="contact-button" onclick="window.location.href='https://t.me/tavo_prono'">Contact DEV</button>
+    </div>
+
+    <!-- Promo buttons -->
+    <button class="promo-button top-left" onclick="window.location.href='https://1wqsg.com/?p=wsof'">CODE PROMO: PAIX225</button>
+    <button class="promo-button top-right" onclick="window.location.href='https://1wqsg.com/?p=wsof'">CODE PROMO: PAIX225</button>
+    <button class="promo-button bottom-left" onclick="window.location.href='https://1wqsg.com/?p=wsof'">CODE PROMO: PAIX225</button>
+    <button class="promo-button bottom-right" onclick="window.location.href='https://1wqsg.com/?p=wsof'">CODE PROMO: PAIX225</button>
+</body>
+</html>

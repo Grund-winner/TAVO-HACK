@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GAME-DEV HACK</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            overflow-y: auto;
+            background-color: #000;
+            color: #33ff33;
+            font-family: 'Courier New', Courier, monospace;
+            position: relative;
+        }
+
+        #app-container {
+            width: 100%;
+            min-height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding-bottom: 50px;
+        }
+
+        #logo {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        #logo h1 {
+            font-size: 2.5em;
+            margin: 0;
+            color: #33ff33;
+            text-shadow: 2px 2px 4px rgba(0, 255, 0, 0.7);
+        }
+
+        #game-name {
+            font-size: 1.5em;
+            margin-bottom: 20px;
+        }
+
+        #command-line {
+            display: flex;
+            flex-direction: column;
+            width: 300px;
+            border: 2px solid #33ff33;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.8);
+            box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+            border-radius: 5px;
+        }
+
+        .command-line-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .command-line-item span {
+            margin-right: 10px;
+        }
+
+        .command-line-item input {
+            background: #333;
+            border: 1px solid #33ff33;
+            color: #33ff33;
+            padding: 8px;
+            outline: none;
+            flex: 1;
+            border-radius: 3px;
+            font-size: 1em;
+        }
+
+        #command-line button {
+            background: #33ff33;
+            border: 1px solid #1e1e1e;
+            color: #000;
+            padding: 8px;
+            cursor: pointer;
+            border-radius: 3px;
+            transition: background 0.3s ease;
+            font-size: 1em;
+            margin-top: 10px;
+        }
+
+        #command-line button:hover {
+            background: #28c328;
+        }
+
+        #result {
+            margin-top: 20px;
+            font-size: 1.2em;
+        }
+
+        .back-button, .scroll-button {
+            position: absolute;
+            top: 20px;
+            background: #33ff33;
+            border: 1px solid #1e1e1e;
+            color: #000;
+            padding: 8px;
+            cursor: pointer;
+            border-radius: 3px;
+            transition: background 0.3s ease;
+            font-size: 1em;
+        }
+
+        .back-button {
+            left: 20px;
+        }
+
+        .scroll-button {
+            right: 20px;
+        }
+
+        .back-button:hover, .scroll-button:hover {
+            background: #28c328;
+        }
+
+        .contact-button {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: #33ff33;
+            border: none;
+            color: #000;
+            padding: 8px 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background 0.3s ease, transform 0.3s ease;
+            font-size: 1em;
+        }
+
+        .contact-button:hover {
+            background-color: #28c328;
+            transform: translateY(-3px);
+        }
+
+        #testimonials {
+            margin-top: 40px;
+            max-width: 400px;
+            text-align: left;
+        }
+
+        #testimonials h2 {
+            font-size: 1.5em;
+            color: #33ff33;
+            margin-bottom: 10px;
+        }
+
+        .testimonial {
+            font-size: 1em;
+            color: #ccc;
+            margin-bottom: 10px;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+            position: relative;
+        }
+
+        .testimonial-name {
+            font-weight: bold;
+            margin-top: 5px;
+        }
+
+        .testimonial-rating {
+            color: #ffcc00;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="back-button" onclick="window.location.href='index.html'">Back</div>
+    <div class="scroll-button" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">Top</div>
+    <div class="contact-button" onclick="window.location.href='https://t.me/tavo_prono'">Contact DEV</div>
+    <div id="app-container">
+        <div id="logo">
+            <h1>GAME-DEV HACK</h1>
+        </div>
+        <div id="game-name"></div>
+        <div id="command-line">
+            <div class="command-line-item">
+                <span>ID:</span>
+                <input type="text" id="idField" placeholder="Enter ID">
+            </div>
+            <div class="command-line-item">
+                <span>Password:</span>
+                <input type="password" id="passwordField" placeholder="Enter Password">
+            </div>
+            <button onclick="executeCommand()">Hack</button>
+            <div id="result"></div>
+        </div>
+        <div id="testimonials">
+            <h2>Témoignages</h2>
+            <div class="testimonial">
+                <p>"GAME-DEV HACK m'a aidé à obtenir des résultats incroyables! et gains énormes sur le je crash de 1xbet."</p>
+                <div class="testimonial-name">Adama Traoré</div>
+                <div class="testimonial-rating">★★★★★</div>
+            </div>
+            <div class="testimonial">
+                <p>"Le meilleur et le seul outil de hack à ma connaissance, je l'ai utilisé uniquement sur luckyJet les résultats sont immpressionnant! Super efficace."</p>
+                <div class="testimonial-name">Koffi Kouassi</div>
+                <div class="testimonial-rating">★★★★★</div>
+            </div>
+            <div class="testimonial">
+                <p>"Fiable et facile à utiliser. Merci GAME-DEV!"</p>
+                <div class="testimonial-name">Awa Koné</div>
+                <div class="testimonial-rating">★★★★★</div>
+            </div>
+            <div class="testimonial">
+                <p>"Des résultats précis, sur 20 jeux tu perd 3 fois si tu est gourmand très satisfait."</p>
+                <div class="testimonial-name">Yao Koffi</div>
+                <div class="testimonial-rating">★★★★☆</div>
+            </div>
+            <div class="testimonial">
+                <p>"GAME-DEV HACK est une révolution dans le domaine des jeux aviator pour la premières fois mon compte 1win dépasse la barre de 150000F en seulement 3jours."</p>
+                <div class="testimonial-name">Fatou Bamba</div>
+                <div class="testimonial-rating">★★★★★</div>
+            </div>
+            <div class="testimonial">
+                <p>"Tu nous rend service GAME-DEV ton outil est performant."</p>
+                <div class="testimonial-name">Ismael Coulibaly</div>
+                <div class="testimonial-rating">★★★★☆</div>
+            </div>
+            <div class="testimonial">
+                <p>"Très satisfait de l'expérience j'ai éffectuer un dépôt de 5000f sur le compte je me retrouve à 58000f la semaines n'est même pas encore terminer."</p>
+                <div class="testimonial-name">Mariam Diabaté</div>
+                <div class="testimonial-rating">★★★★★</div>
+            </div>
+            <div class="testimonial">
+                <p>"Des résultats fiables j'ai jouer à crash 1win côtes 27,04x; 12,37x puis 44,03x.sont passer puis le logiciel à prédit 118,09x j'ai pas miser la côter est passer à 118,44x."</p>
+                <div class="testimonial-name">Aboubacar Diallo</div>
+                <div class="testimonial-rating">★★★★☆</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const passwords = [
+            "T0FwK9Pz8LJ2", "g5AaZ1BfM6cP", "Fk8M2Tq1rXdP", "Z9y0cKpF2VbL",
+            "R7wGm4Q1V8pZ", "Bx6VtD3PzJ1n", "A3yZ0Lq5Fv7K", "h1kB4Xy9tQeP",
+            "Y6nGm2J0P8rL", "d8T0x5KQpZ7v", "w2Y5cK1rF8LZ", "Z6pQ9vG3K2mB",
+            "C0yF4J1wT7Lp", "R5M2x8KQv9Pj", "B4L7nT3Fz1kY", "h0Q9Z2c6P8vG",
+            "X7pM1rT5yL8B", "d9F3K2Z0wL6c", "W8J4vP5Qx1nT", "A6rK0y3L2B8M",
+            "Q5mT2c7Z0p1L", "R1F8x9yK4wLZ", "t2J0P5v8K6cQ", "B9L4nF3pT7Yx",
+            "d7K0Q1M2c8L6", "X5pF8yT2r1vG", "Z0L4n9Q3K7P8", "w1J5cT2F6r8L",
+            "R9xK3M0p2L7v", "h2F8Q0y5T1Kc", "B3L4p7Q6v8xM", "d1T9K0y2L5P8",
+            "X6cF2rT4L7Q", "Z8pM0y5K1n3L", "w7J4T2c8Q5F1", "A9R0K1x2p6L7",
+            "Q2F5M8vT9L0c", "R6pK4T3y1L2v", "B8L0nF2T7J5K", "d5Q1yK3M4x8L",
+            "X2pT7rF0L6K9", "Z1Q5y8L3pK2T", "w4J2T6F9K1pL", "A8R5K0y1L2vM",
+            "Q9F3M2yT5L0c", "R2xK8T1L4p7v", "B7L9nT0F3K2J", "d0Q4yK1M2T8L",
+            "X9pF2rT3L7K5", "Z4Q1y0L5pK8T", "w6J3T8F1K2pL", "A1R7K9y2L5vM",
+            "Q0F8M1yT9L4c", "R3xK5T2L0p8v", "B2L5n9Q0F8M4", "d6T1F9y0K3L8",
+            "X4pM2rL7T0Q9", "Z3Q0y5L8p6K7", "w8F1J2T9K4pL", "A0R8K2y5p7L",
+            "Q1F6T8c9L2vM", "R4xK7y2p8L0T", "B5L2n4Q9F8M", "d6T1F8y0K4L"
+        ];
+
+        const usedPasswords = {};
+
+        function executeCommand() {
+            const idField = document.getElementById('idField');
+            const passwordField = document.getElementById('passwordField');
+            const resultDiv = document.getElementById('result');
+
+            const id = idField.value.trim();
+            const password = passwordField.value.trim();
+
+            if (!id || !password) {
+                resultDiv.innerText = 'Please enter both ID and Password.';
+                resultDiv.style.color = 'red';
+                return;
+            }
+
+            // Check if password is valid
+            if (!passwords.includes(password)) {
+                resultDiv.innerText = 'Invalid Password.';
+                resultDiv.style.color = 'red';
+                return;
+            }
+
+            // Check if password is already used
+            if (usedPasswords[password] && usedPasswords[password] !== id) {
+                resultDiv.innerText = 'Password already used by another ID.';
+                resultDiv.style.color = 'red';
+                return;
+            }
+
+            // Associate the password with the ID if valid
+            usedPasswords[password] = id;
+            resultDiv.innerText = 'Access Granted. ID and Password are valid.';
+            resultDiv.style.color = 'green';
+        }
+    </script>
+</body>
+</html>
